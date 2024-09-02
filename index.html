@@ -7,61 +7,65 @@
     <title>Feliz Dia Dos Namorados</title>
 
     <style>
-        body{
+        body {
             background-color: red;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
         }
 
-        .painel{
-            margin: auto;
+        .painel {
             background-color: white;
-            width: 500px;
-            height: 500px;
+            width: 90%;
+            max-width: 500px;
+            height: auto;
             border-radius: 20px;
             text-align: center;
-            padding-top: 50px;
+            padding: 20px;
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         }
-        #sim{
+
+        #sim, #nao {
             height: 40px;
             width: 60px;
             background-color: red;
             border: 2px solid white;
             border-radius: 10px;
             color: white;
-            margin-left: -50px;
-        }
-        #nao{
-            position: absolute;
-            height: 40px;
-            width: 60px;
-            background-color: red;
-            border: 2px solid white;
-            border-radius: 10px;
-            color: white;
-            margin-left: 10px;
+            margin: 10px;
         }
 
+        #nao {
+            position: absolute;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
     </style>
 
 </head>
 <body>
 
     <div class="painel">
-        <h1> Feliz Dia dos Namorados</h1>
+        <h1>Feliz Dia dos Namorados (quem sabe um dia)</h1>
 
         <img src="https://gifman.net/wp-content/uploads/2019/06/ursinho-fofo-apaixonado.gif" alt="">
 
-        <h2>Aceita namorar comigo? </h2>
-        
+        <h2>Aceita namorar comigo?</h2>
 
-        <a href="https://www.youtube.com/watch?v=izGwDsrQ1eQ"><button id="sim" > Sim! </button></a>
-        <button onmouseover="fuja()" id="nao"> Não! </button>
-        
+        <a href="https://www.youtube.com/watch?v=izGwDsrQ1eQ"><button id="sim">Sim!</button></a>
+        <button onmouseover="fuja()" id="nao">Não!</button>
     </div>
 
     <script>
-        function fuja(){
-            var botaoNao = document.getElementById("nao")
+        function fuja() {
+            var botaoNao = document.getElementById("nao");
 
             var larguraJanela = window.innerWidth;
             var alturaJanela = window.innerHeight;
@@ -74,13 +78,8 @@
 
             botaoNao.style.left = aleatorioX + "px";
             botaoNao.style.top = aleatorioY + "px";
-
-
         }
     </script>
 
-
-
-    
 </body>
 </html>
